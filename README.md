@@ -1,6 +1,12 @@
-# Getting Started with Create React App
+# Loja React - Julia Kombucha
 
+Loja de Kombucha, para o projeto final do curso de React da CoderHouse.
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Desafio: Criar App utilizando CLI
+- usando CRA
+- comandos realizados
+- README.md editado.
 
 ## Available Scripts
 
