@@ -8,6 +8,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - comandos realizados
 - README.md editado.
 
+## Desafio 2: Menu e-commerce
+- adicionado gh-pages [Deploying a React App* to GitHub Pages](https://github.com/gitname/react-gh-pages)
+- adicionado navbar usando bootstrap
 ## Available Scripts
 
 In the project directory, you can run:
