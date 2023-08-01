@@ -1,9 +1,7 @@
 import { Item, Input, Titulo, PasswordInput } from "./presentation";
 
-export default function ItemListContainer() {
+export default function ItemListContainer({ children }) {
   const temas = [
-    { value: "Item List JS", link: "./javascript" },
-    { value: "Item List CSS", link: "./css" },
     { value: "Item List React", link: "./react" },
     { value: "Item List Componentes", link: "./componentes" },
   ];
@@ -21,6 +19,7 @@ export default function ItemListContainer() {
         <Input placeholder="Comp Input: Login" />
         <PasswordInput />
       </div>
+      <div className="card d-flex flex-row flex-wrap">{children}</div>
     </div>
   );
 }
