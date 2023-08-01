@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/loja-react-Daikawa/static/css/main.9def8c4a.css",
-    "main.js": "/loja-react-Daikawa/static/js/main.417232b1.js",
+    "main.js": "/loja-react-Daikawa/static/js/main.c7e8851e.js",
     "static/media/logo-1.png": "/loja-react-Daikawa/static/media/logo-1.b162a75075c22a5f77b1.png",
     "index.html": "/loja-react-Daikawa/index.html",
     "main.9def8c4a.css.map": "/loja-react-Daikawa/static/css/main.9def8c4a.css.map",
-    "main.417232b1.js.map": "/loja-react-Daikawa/static/js/main.417232b1.js.map"
+    "main.c7e8851e.js.map": "/loja-react-Daikawa/static/js/main.c7e8851e.js.map"
   },
   "entrypoints": [
     "static/css/main.9def8c4a.css",
-    "static/js/main.417232b1.js"
+    "static/js/main.c7e8851e.js"
   ]
 }
