@@ -11,6 +11,11 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## Desafio 2: Menu e-commerce
 - adicionado gh-pages [Deploying a React App* to GitHub Pages](https://github.com/gitname/react-gh-pages)
 - adicionado navbar usando bootstrap
+
+## Desafio 3: Crie sua Landing Page
+- Criado componente CartWidget usando ícone (biblioteca fontAwesome). Componente importado dentro da NavBar.
+- Adicionado estilos na NavBar usando Bootstrap.
+- Criado compontente container ItemListContainer, contendo componentes de Título, Itens e Inputs. Componente importado dentro de App, abaixo da NavBar.
 ## Available Scripts
 
 In the project directory, you can run:
