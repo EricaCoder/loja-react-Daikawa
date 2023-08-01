@@ -16,6 +16,11 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - Criado componente CartWidget usando ícone (biblioteca fontAwesome). Componente importado dentro da NavBar.
 - Adicionado estilos na NavBar usando Bootstrap.
 - Criado compontente container ItemListContainer, contendo componentes de Título, Itens e Inputs. Componente importado dentro de App, abaixo da NavBar.
+
+## Desafio 4: Contador com Botão
+- Criado componente `ItemCount`, que aceita as props: `stock`, `initial` e `productName`.
+- Criada prop `children` em `ItemListContainer`.
+- `ItemCount` importado em `App.jsx`, incorporando como `children` dentro de `ItemListContainer`.
 ## Available Scripts
 
 In the project directory, you can run:
