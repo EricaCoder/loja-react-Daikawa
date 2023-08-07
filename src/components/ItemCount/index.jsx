@@ -35,8 +35,7 @@ export default function ItemCount({ stock, initial, onAdd, productName }) {
   };
 
   return (
-    <div className="card-body d-inline">
-      <h3 className="text-secondary">{productName}</h3>
+    <div className="card-body d-inline ">
       <h4 className="text-secondary">em stock: {remain}</h4>
       <div className="card">
         <div
