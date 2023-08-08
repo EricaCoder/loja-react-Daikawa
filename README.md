@@ -21,6 +21,11 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - Criado componente `ItemCount`, que aceita as props: `stock`, `initial` e `productName`.
 - Criada prop `children` em `ItemListContainer`.
 - `ItemCount` importado em `App.jsx`, incorporando como `children` dentro de `ItemListContainer`.
+
+## Desafio 5 - Catálogo com maps
+- Criado componente `Item` destinado a mostrar um card do produto, que deverá mostrar mais detalhes ao se clicado (a ser implementado mais à frente, conforme consta no desafio)
+- Criado componente `ItemList` que serve como um agregador de `Item`, incorporado dentro de `ItemListContainer`.
+- Criada uma `async mock` (promise) faz um chamado assíncrono a um mock estático de dados `items`, retornando em 2 minutos para emular adiamento da rede.
 ## Available Scripts
 
 In the project directory, you can run:
