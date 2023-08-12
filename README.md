@@ -26,6 +26,15 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - Criado componente `Item` destinado a mostrar um card do produto, que deverá mostrar mais detalhes ao se clicado (a ser implementado mais à frente, conforme consta no desafio)
 - Criado componente `ItemList` que serve como um agregador de `Item`, incorporado dentro de `ItemListContainer`.
 - Criada uma `async mock` (promise) faz um chamado assíncrono a um mock estático de dados `items`, retornando em 2 minutos para emular adiamento da rede.
+
+## Desafio 6 - Detalhe do Produto
+- Criado componente `ItemDetailContainer` que contém a lógica para pegar o item dentro de `ItemDetail`
+- Criado componente `ItemDetail` e adicionado lógica para lista de Favoritos
+- Criado arquivo `data.js` para poder separar dados de lógica
+- Refatorações:
+  - Usando a mesma lógica acima, foi feito o refactor de `Item List`, deixando esse componente puro, e inserindo a lógica em `ItemListContainer`
+  - Refactor de `Item`
+  - Refactor de `ItemCount` e inserido a lógica de verificação de estoque.
 ## Available Scripts
 
 In the project directory, you can run:
