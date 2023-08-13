@@ -17,7 +17,12 @@ export default function ItemListContainer({ children }) {
     return <h1>{error.toString()}</h1>;
   }
   if (state === "Loading") {
-    return <h1 className="d-flex justify-content-center">{state}...</h1>;
+    return (
+      <>
+        <Titulo value="ItemListContainer" />
+        <h1 className="d-flex justify-content-center">{state}...</h1>
+      </>
+    );
   }
   return (
     <div className="container-fluid">
