@@ -1,24 +1,24 @@
 import { useEffect, useState } from "react";
-import ItemDetail from "../ItemDetail";
-import { items, favoritesList } from "../../services/data";
+import ItemDetail from "../../components/ItemDetail";
+import { favoritesList } from "../../services/data";
+import data from "../../services/data.json";
 
 export default function ItemDetailContainer() {
-  const item = items[0];
-  const [product, setProduct] = useState("");
+  const item = data[0];
+  const [product, setProduct] = useState({ data: {}, loading: true });
   const GetItem = () => {
     useEffect(() => {
-      setProduct("loading");
       setTimeout(() => {
-        setProduct(item);
+        setProduct({ data: item, loading: false });
       }, 2000);
     }, []);
   };
   GetItem();
-  if (product === "loading") {
+  if (product.loading) {
     return (
       <h1 className="d-flex justify-content-center">
         ItemDetailContainer <br />
-        {product}...
+        Loading...
       </h1>
     );
   }
@@ -26,7 +26,7 @@ export default function ItemDetailContainer() {
     <div className="container-fluid">
       <h1 className="d-flex justify-content-center">ItemDetailContainer</h1>
       <div className="d-flex justify-content-center">
-        <ItemDetail item={product} favoritesList={favoritesList} />
+        <ItemDetail item={product.data} favoritesList={favoritesList} />
       </div>
     </div>
   );

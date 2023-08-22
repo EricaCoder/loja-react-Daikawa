@@ -35,6 +35,13 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
   - Usando a mesma lógica acima, foi feito o refactor de `Item List`, deixando esse componente puro, e inserindo a lógica em `ItemListContainer`
   - Refactor de `Item`
   - Refactor de `ItemCount` e inserido a lógica de verificação de estoque.
+
+## Desafio 7 - Sincronizar Counter
+- [Já feito no desafio anterior] Importar o `ItemCount` no `ItemDetail`
+- Configurado o evento de compra seguindo os detalhes do manual
+- `ItemDetail` agora espera eventos de `ItemCount`
+- Adicionado estado em `ItemDetail` para fazer `ItemCount` desaparecer
+- Adicionado botão para finalizar compra. Falta a rota `/cart`
 ## Available Scripts
 
 In the project directory, you can run:

@@ -1,6 +1,12 @@
+import { useState } from "react";
 import ItemCount from "../ItemCount";
 
 export default function Item({ item }) {
+  const [qty, setQty] = useState("");
+  const onAdd = (itemCountData) => {
+    setQty(itemCountData);
+    console.log("onAdd: " + itemCountData);
+  };
   return (
     <li key={item.id} className="list-group-item col-sm m-3">
       <img
@@ -12,7 +18,7 @@ export default function Item({ item }) {
       <p className="card-text">{item.description}</p>
       <h2 className="card-subtitle mb-2 ">R$ {item.price}</h2>
       <div>
-        <ItemCount item={item} />
+        <ItemCount item={item} onAdd={onAdd} />
       </div>
     </li>
   );

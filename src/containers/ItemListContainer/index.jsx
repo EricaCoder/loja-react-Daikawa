@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import ItemList from "../ItemList";
+import ItemList from "../../components/ItemList";
 import { Input, Titulo, PasswordInput } from "./presentation";
-import { items } from "../../services/data";
+import items from "../../services/data.json";
 
 export default function ItemListContainer({ children }) {
   const [state, setState] = useState("");

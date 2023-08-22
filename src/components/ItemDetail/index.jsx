@@ -5,6 +5,17 @@ import ItemCount from "../ItemCount";
 
 export default function ItemDetail({ item, favoritesList }) {
   const [favorite, setFavorite] = useState("empty");
+  const [qty, setQty] = useState("");
+  const [loading, setLoading] = useState(false);
+  const onAdd = (itemCountData) => {
+    setLoading(true);
+    setTimeout(() => {
+      setQty(itemCountData);
+      setLoading(false);
+      console.log("onAdd: " + itemCountData);
+    }, 2000);
+  };
+
   const handleFavorites = () => {
     if (favorite === "empty") {
       setFavorite("fav");
@@ -16,6 +27,7 @@ export default function ItemDetail({ item, favoritesList }) {
       console.log("favoritos: " + favoritesList);
     }
   };
+
   return (
     <div className="container w-75 border">
       <div className="row d-flex justify-content-between card-body border">
@@ -84,7 +96,13 @@ export default function ItemDetail({ item, favoritesList }) {
             <FontAwesomeIcon icon={icon({ name: "trophy" })} className="mr-2" />
             Você acumula 1,5 pontos.
           </h4>
-          <ItemCount item={item} />
+          {!qty && <ItemCount item={item} onAdd={onAdd} />}
+          {loading && <h3>loading</h3>}
+          {qty && (
+            <button type="button" className="btn btn-primary m-1">
+              Finalizar Compra
+            </button>
+          )}
         </div>
       </div>
     </div>
