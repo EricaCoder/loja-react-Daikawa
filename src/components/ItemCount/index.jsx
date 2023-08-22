@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function ItemCount({ item }) {
+export default function ItemCount({ item, onAdd }) {
   /** hook de estado para quantidade a adicionar no carrinho */
   const [qty, setQty] = useState(item.initial);
 
@@ -27,10 +27,16 @@ export default function ItemCount({ item }) {
     setQty(plus);
   };
 
-  /** função onAdd para manipular o onClick do botão de "adicionar ao carrinho" */
-  const onAdd = () => {
+  /** função onAdd renomeada para onClick para manipular o onClick do botão de "adicionar ao carrinho" */
+  const onClick = () => {
     let add = 0;
-    qty <= remain ? (add = remain - qty) : (add = remain);
+    if (qty <= remain) {
+      add = remain - qty;
+      onAdd(qty);
+    } else {
+      add = remain;
+      setQty(add);
+    }
     setRemain(add);
   };
   /** função isStock para verificar se há estoque do produto */
@@ -78,7 +84,7 @@ export default function ItemCount({ item }) {
             <button
               type="button"
               className="btn btn-primary m-1"
-              onClick={onAdd}
+              onClick={onClick}
             >
               Adicionar ao carrinho
             </button>
