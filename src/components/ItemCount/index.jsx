@@ -44,11 +44,11 @@ export default function ItemCount({ item, onAdd }) {
     if (!item.stock) {
       return (
         <>
-          <h4 className="text-secondary">Item sem Estoque</h4>
+          <h5 className="text-secondary">Item sem Estoque</h5>
           <div className="card">
-            <h5 className="align-middle text-justify m-1">
+            <p className="align-middle text-justify m-1">
               Quero ser avisado quando esse item voltar ao estoque
-            </h5>
+            </p>
             <button type="button" className="btn btn-primary m-1">
               Me avise
             </button>
@@ -58,7 +58,7 @@ export default function ItemCount({ item, onAdd }) {
     } else {
       return (
         <>
-          <h4 className="text-secondary">Estoque disponível: {remain}</h4>
+          <h5 className="text-secondary">Estoque disponível: {remain}</h5>
           <div className="card">
             <div
               className="btn-group d-flex justify-content-between m-1 border rounded"
