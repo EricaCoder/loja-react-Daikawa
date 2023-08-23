@@ -42,6 +42,19 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - `ItemDetail` agora espera eventos de `ItemCount`
 - Adicionado estado em `ItemDetail` para fazer `ItemCount` desaparecer
 - Adicionado botão para finalizar compra. Falta a rota `/cart`
+
+## PRIMEIRA ENTREGA - Navegabilidade (Routing)
+- Instalado o `react-router-dom`
+- `/` leva a <ItemListContainer />
+- `/category/:category` leva a <ItemListContainer />
+- `/item/:id` leva a <ItemDetailContainer />
+- Criadas rotas também para o `Cart`, `Checkout`, Sobre, Contato e página de erro 404 - Not Found
+- Navbar com cart presente
+- Catálogo presente
+- Detalhe do produto presente
+- Arquivo readme.md (este arquivo)
+- Responsividade mobile para os detalhes do produto
+- Adicionado Breadcrumbs nas páginas de Categorias e de Detalhes do Produto.
 ## Available Scripts
 
 In the project directory, you can run:
