@@ -3,13 +3,14 @@ import { useParams, NavLink } from "react-router-dom";
 import ItemDetail from "../../components/ItemDetail";
 import { favoritesList } from "../../services/data";
 import data from "../../services/data.json";
+import { CartProvContext } from "../../providers/CartProvider";
 
 export default function ItemDetailContainer() {
   const [product, setProduct] = useState({ data: {}, loading: true });
-  const slug = useParams();
-  const item = data[slug.id - 1];
-
+  let item;
   const GetItem = () => {
+    const slug = useParams();
+    item = data[slug.id - 1];
     useEffect(() => {
       setTimeout(() => {
         setProduct({ data: item, loading: false });
@@ -27,7 +28,7 @@ export default function ItemDetailContainer() {
   }
   return (
     <div className="container-fluid">
-      <nav ariaLabel="breadcrumb">
+      <nav aria-label="breadcrumb">
         <ol className="breadcrumb">
           <li className="breadcrumb-item">
             <NavLink to="/">Home</NavLink>
@@ -43,7 +44,9 @@ export default function ItemDetailContainer() {
         </ol>
       </nav>
       <div className="d-flex justify-content-center mt-2">
-        <ItemDetail item={product.data} favoritesList={favoritesList} />
+        <CartProvContext.Provider value={product.data}>
+          <ItemDetail favoritesList={favoritesList} />
+        </CartProvContext.Provider>
       </div>
     </div>
   );

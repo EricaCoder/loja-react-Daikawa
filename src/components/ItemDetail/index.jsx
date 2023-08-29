@@ -1,12 +1,17 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { icon } from "@fortawesome/fontawesome-svg-core/import.macro";
 import ItemCount from "../ItemCount";
+import Button from "../Buttons/Button";
+import CartProvider, { CartProvContext } from "../../providers/CartProvider";
+import CartContext from "../../context/cartContext";
 
-export default function ItemDetail({ item, favoritesList }) {
+export default function ItemDetail({ favoritesList }) {
+  const item = useContext(CartProvContext);
   const [favorite, setFavorite] = useState("empty");
   const [qty, setQty] = useState("");
   const [loading, setLoading] = useState(false);
+
   const onAdd = (itemCountData) => {
     setLoading(true);
     setTimeout(() => {
@@ -101,9 +106,11 @@ export default function ItemDetail({ item, favoritesList }) {
           {!qty && <ItemCount item={item} onAdd={onAdd} />}
           {loading && <h3>loading</h3>}
           {qty && (
-            <button type="button" className="btn btn-primary mt-5">
-              Finalizar Compra
-            </button>
+            <CartContext.Provider value={qty}>
+              <CartProvider>
+                <Button />
+              </CartProvider>
+            </CartContext.Provider>
           )}
         </div>
       </div>
