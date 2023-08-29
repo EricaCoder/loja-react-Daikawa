@@ -55,6 +55,16 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - Arquivo readme.md (este arquivo)
 - Responsividade mobile para os detalhes do produto
 - Adicionado Breadcrumbs nas páginas de Categorias e de Detalhes do Produto.
+
+## Desafio 9 - Cart Context
+- Criado `CartContext.js` com o contexto e também custom provider `CartProvider.jsx`
+- Ao clicar no `ItemCount` presente em `ItemDetail`, é armazenado o produto e quatidade em forma de objeto
+- A lógica não aceita duplicações de produto
+- Métodos:
+- [x] `addItem()` adiciona certa quantidade de um item no carrinho > visível no console
+- [ ] `removeItem()` a ser feito no CartView (próximo desafio)
+- [x] `clear()`
+- [ ] `isInCart()` a ser feito no CartView (próximo desafio)
 ## Available Scripts
 
 In the project directory, you can run:

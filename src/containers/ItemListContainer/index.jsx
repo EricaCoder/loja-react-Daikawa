@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams, NavLink } from "react-router-dom";
 import ItemList from "../../components/ItemList";
-import { Input, Titulo, PasswordInput } from "./presentation";
+import { Titulo } from "./presentation";
 import items from "../../services/data.json";
 
 export default function ItemListContainer({ children }) {
@@ -60,10 +60,6 @@ export default function ItemListContainer({ children }) {
         )}
       </div>
 
-      <div className="card-body">
-        <Input placeholder="Comp Input: Login" />
-        <PasswordInput />
-      </div>
       <div className="card d-flex flex-row flex-wrap">{children}</div>
     </div>
   );

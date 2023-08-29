@@ -12,14 +12,14 @@ export function Router() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route index element={<Home />} />
-        <Route path="/category/:category" element={<Category />} />
-        <Route path="/item/:id" element={<ItemPage />} />
-        <Route path="/cart" element={<Cart />} />
-        <Route path="/checkout" element={<CheckOut />} />
-        <Route path="/sobre" element={<About />} />
-        <Route path="/contato" element={<Contact />} />
-        <Route path="*" element={<NotFound />} />
+        <Route exact path="/" element={<Home />} />
+        <Route exact path="/category/:category" element={<Category />} />
+        <Route exact path="/item/:id" element={<ItemPage />} />
+        <Route exact path="/cart" element={<Cart />} />
+        <Route exact path="/checkout" element={<CheckOut />} />
+        <Route exact path="/sobre" element={<About />} />
+        <Route exact path="/contato" element={<Contact />} />
+        <Route exact path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
   );
