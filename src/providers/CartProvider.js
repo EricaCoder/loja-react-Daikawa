@@ -24,7 +24,7 @@ export default function CartProvider({ children }) {
       return product;
     });
     setCart({ ...cart, addedItems: newAddedItems });
-  });
+  }, []);
 
   const removeItem = (item) => {};
   const clear = () => {
