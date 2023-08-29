@@ -4,18 +4,7 @@ import CartContext from "../context/cartContext";
 export const CartProvContext = createContext();
 
 const INITIAL_STATE = {
-  addedItems: [
-    {
-      id: "2",
-      title: "gengi-bucha",
-      description: "Kombucha com gengibre",
-      price: "15,00",
-      category: "kombucha",
-      initial: 1,
-      stock: 4,
-      quantity: 1,
-    },
-  ],
+  addedItems: [],
   totalPrice: 0,
 };
 export default function CartProvider({ children }) {
@@ -31,16 +20,10 @@ export default function CartProvider({ children }) {
     }
     const newAddedItems = cart.addedItems.map((product) => {
       if (product.title === item.title) {
-        console.log("teste1 ", item);
-        console.log("itemQty: ", itemQty);
         return { ...product, quantity: product.quantity + itemQty };
       }
-      //  else {
-      console.log("teste2 ", item);
-      console.log("itemQty: ", itemQty);
-      return { ...product, quantity: product.quantity + itemQty };
-      // return product;
-      // }
+
+      return product;
     });
     setCart({ ...cart, addedItems: newAddedItems });
   });
