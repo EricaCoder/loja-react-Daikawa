@@ -1,7 +1,5 @@
-import { useContext, useEffect, useState, createContext } from "react";
-import CartContext from "../context/cartContext";
-
-export const CartProvContext = createContext();
+import { useContext, useEffect, useState } from "react";
+import CartContext, { CartItemContext } from "../context/cartContext";
 
 const INITIAL_STATE = {
   addedItems: [],
@@ -9,7 +7,7 @@ const INITIAL_STATE = {
 };
 export default function CartProvider({ children }) {
   const itemQty = useContext(CartContext);
-  const item = useContext(CartProvContext);
+  const item = useContext(CartItemContext);
   const [cart, setCart] = useState(INITIAL_STATE);
 
   useEffect(() => {

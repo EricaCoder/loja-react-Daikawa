@@ -3,7 +3,7 @@ import { useParams, NavLink } from "react-router-dom";
 import ItemDetail from "../../components/ItemDetail";
 import { favoritesList } from "../../services/data";
 import data from "../../services/data.json";
-import { CartProvContext } from "../../providers/CartProvider";
+import { CartItemContext } from "../../context/cartContext.js";
 
 export default function ItemDetailContainer() {
   const [product, setProduct] = useState({ data: {}, loading: true });
@@ -44,9 +44,9 @@ export default function ItemDetailContainer() {
         </ol>
       </nav>
       <div className="d-flex justify-content-center mt-2">
-        <CartProvContext.Provider value={product.data}>
+        <CartItemContext.Provider value={product.data}>
           <ItemDetail favoritesList={favoritesList} />
-        </CartProvContext.Provider>
+        </CartItemContext.Provider>
       </div>
     </div>
   );

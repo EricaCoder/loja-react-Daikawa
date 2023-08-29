@@ -3,11 +3,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { icon } from "@fortawesome/fontawesome-svg-core/import.macro";
 import ItemCount from "../ItemCount";
 import Button from "../Buttons/Button";
-import CartProvider, { CartProvContext } from "../../providers/CartProvider";
-import CartContext from "../../context/cartContext";
+import CartProvider from "../../providers/CartProvider";
+import CartContext, { CartItemContext } from "../../context/cartContext";
 
 export default function ItemDetail({ favoritesList }) {
-  const item = useContext(CartProvContext);
+  const item = useContext(CartItemContext);
   const [favorite, setFavorite] = useState("empty");
   const [qty, setQty] = useState("");
   const [loading, setLoading] = useState(false);
