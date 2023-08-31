@@ -1,10 +1,13 @@
 import { useContext } from "react";
 import CartContext from "../../context/cartContext";
 
+import { useNavigate } from "react-router-dom";
 export default function Button() {
   const addItem = useContext(CartContext);
+  const navigate = useNavigate();
   const getItem = () => {
-    console.log(addItem); // recebe o produto
+    console.log("contexto que eu quero? ", addItem.cart.addedItems); // recebe o produto
+    navigate("/cart");
     return addItem;
   };
   return (

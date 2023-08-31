@@ -7,6 +7,8 @@ import Cart from "../pages/Cart";
 import CheckOut from "../pages/CheckOut";
 import ItemPage from "../pages/ItemPage";
 import Category from "../pages/Category";
+import CartContext from "../context/cartContext";
+import CartProvider from "../providers/CartProvider";
 
 export function Router() {
   return (
