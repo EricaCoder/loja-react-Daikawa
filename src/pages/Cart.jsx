@@ -1,10 +1,14 @@
 import NavBar from "../components/NavBar";
+import CartPage from "../components/CartPage";
+import { CartItemContext } from "../context/cartContext";
 
 export default function Cart() {
   return (
     <div className="App">
       <NavBar />
-      <h1>Carrinho de Compras</h1>
+      <CartItemContext.Provider value={""}>
+        <CartPage />
+      </CartItemContext.Provider>
     </div>
   );
 }
